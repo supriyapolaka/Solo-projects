@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>priya <i class="fa fa-female"></i></li>
+            <li>camera <i class="fa fa-camera"></i></li>
+            <li>book <i class="fa fa-book"></i></li>
+            <li>car <i class="fa fa-car"></i></li>
+        </ul>
+    </nav>
+    <header class="header">
+        <div class="container">
+          <div>
+            <h1>Flexbox Heart<i class="fa fa-heart"></i></h1>
+            <p>
+              This crash course was created by Brad Traversy to help you learn the
+              basics of flexbox. Flexbox is a very important and useful tool in
+              CSS.
+            </p>
+          </div>
+          <img src="https://traversymedia.com/images/grid.svg" alt="" />
+        </div>
+      </header>
+  
+      <section class="boxes">
+        <div class="container">
+          <div class="box">
+            <h2><i class="fa fa-tree"></i>Trees</h2>
+            <p>
+              A more efficient way to lay out, align and distribute space among
+              items in a container
+            </p>
+          </div>
+  
+          <div class="box">
+            <h2><i class="fa fa-umbrella"></i>Umbrealla</h2>
+            <p>
+              Flexbox usually solves tricky problems including how to position or
+              dynamically resize elements on a page
+            </p>
+          </div>
+  
+          <div class="box">
+            <h2><i class="fa fa-star"></i>Star</i></h2>
+            <p>
+              Flexbox makes building a website layout (and making it responsive!)
+              much, much easier
+            </p>
+          </div>
+        </div>
+      </section>
+</body>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+nav {
+    font-size: 40px;
+    background-color: rgb(15, 199, 174);
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    display:flex;   
+}
+nav ul li {
+
+    list-style-type: none;
+    padding: 20px;
+    margin: 10px;
+    flex:auto;
+    text-align: center;
+}
+nav ul li:hover{
+    background-color: black;
+    color: aliceblue;
+}
+.fa {
+    color: rgb(228, 37, 101);
+}
+.fa:hover{
+    color: blue;
+}
+.header {
+  background-color: #2f73da;
+  color: #fff;
+  min-height: 400px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  
+}
+
+.header img {
+  max-width: 400px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boxes .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  flex: 1;
+  background: #238d9b;
+  color: #fff;
+  border-radius: 10px;
+  margin: 10px 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+  padding: 10px 10px;
+}
+
+.box i {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .boxes .container {
+    display: block;
+    text-align: center;
+  }
+}
